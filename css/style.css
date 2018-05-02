@@ -1,5 +1,157 @@
+/*ESTILO RESET*/
 *{
-  margin: auto;
+    margin: 0;
+    padding:0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    background-color: #87CEFA;
+}
+
+header{
+
+    width:100%;
+    height: 50px;
+    top:0;
+    left:0;
+    background-color: #000;
+    position: fixed;
+    z-index: 10;
+
+}
+
+.menu-icon{
+
+    position: fixed;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+    height: 40px;
+    text-align: center;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    transition: all .4s;
+    left: 2px;
+    top:0;
+    z-index: 11;
+}
+
+.menu-icon:hover{
+
+    background-color: deepskyblue;
+    color: #222;
+}
+
+#chk{
+    display: none;
+}
+
+.menu{
+
+    height: 100%;
+    position: fixed;
+    background-color: #000;
+    top:0;
+    overflow: hidden;
+    transition: all .2s;
+    z-index: 12;
+
+}
+
+#principal{
+
+    width:300px;
+    left:-300px;
+
+}
+
+ul{
+    list-style: none;
+
+
+}
+
+li a{
+    display: block;
+    font-size: 18px;
+    font-family: 'Arial';
+    padding: 10px;
+    border-bottom: solid 1px #111;
+    color: white;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+ul li span{
+
+    float:right;
+    padding-right: 10px;
+}
+
+
+
+ul li a:hover{
+
+    background-color: deepskyblue;
+    color:#000;
+
+}
+
+.voltar{
+
+    margin-top:60px;
+    background-color: #111;
+    border-left: solid 5px #222;
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    position: fixed;
+    background-color: rgba(0,0,0,.6);
+    display: none;
+    z-index: 10;
+
+}
+
+#chk:checked ~ .bg{
+
+    display: block;
+}
+
+
+#chk:checked ~ #principal {
+    transform: translateX(300px);
+
+
+}
+
+#filmes{
+    width: 250px;
+    left:-250px;
+
+}
+
+#serie{
+    width: 250px;
+    left:-250px;
+
+}
+#filmes:target{
+    transform: translateX(250px);
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,.5);
+}
+
+#serie:target{
+    transform: translateX(250px);
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,.5);
 }
 
 .cartaz{
@@ -21,32 +173,58 @@
 
 #watch_now{
   position: relative;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 5%;
-}
+ }
 
 .sinopse{
   color: white;
   width: 50%;
   font-family: monospace;
   margin-left: 30px;
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 .elenco{
-  background-color: blue;
-  height: 250px;
+  background-color: #161515;
+  height: 270px;
   position: relative;
   margin-top: 100vh;
   z-index: 2;
 }
 
+.elenco p{
+  color: white;
+  font-size: 20pt;
+  background-color: gray;
+}
+
+.elenco img{
+	margin: 20px;
+	border-radius: 50%;
+	float: right;
+	width: 200px;
+	height: 200px;
+}
+
 .imagens{
   width: 100%;
   height: 400px;
-  background-color: yellow;
+  background-color: #161515;
   position: relative;
   z-index: 3;
+}
+
+.imagens img{
+	margin: 0px;
+	width: 33%;
+	height: 400px;
+}
+
+.imagens p{
+  color: white;
+  font-size: 20pt;
+  background-color: gray;
 }
 
 .trailer{
@@ -55,4 +233,17 @@
   width: 100%;
   height: 100%;
   z-index: 4;
+}
+
+.trailer p{
+  color: white;
+  font-size: 20pt;
+  background-color: gray;
+}
+
+.rodape{
+	width: 100%;
+	height: 200px;
+	position: relative;
+	z-index: 5;
 }
